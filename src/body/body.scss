@@ -1,0 +1,39 @@
+@import '../setting/varAndMixin.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: auto;
+    background-color: $color-white;
+
+    nav {
+        width: auto;
+        height: auto;
+
+        .menu {
+            background-color: $color-grey;
+            width: 100vw;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
+
+// small devices (smartphons on landscape oreintation, 768px and up)
+@media (max-width: 768px) and (orientation: landscape) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}

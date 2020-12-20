@@ -1,0 +1,40 @@
+@import '../setting/varAndMixin.scss';
+
+.hamburger {
+    @include flexCenter;
+    width: 70px;
+    height: 50px;
+    padding: 10px;
+    margin: auto 10px auto 10px;
+    background-color: transparent;
+    border: transparent;
+    outline: transparent;
+    cursor: pointer;
+
+    &__icon {
+        background-color: $color-black;
+        position: relative;
+        width: 50px;
+        height: 5px;
+        border-radius: 15px;
+
+        &::before,
+        &::after {
+            background-color: $color-black;
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 50px;
+            height: 5px;
+            border-radius: 15px;
+        }
+
+        &::before {
+            transform: translateY(10px);
+        }
+
+        &::after {
+            transform: translateY(-10px);
+        }
+    }
+}
