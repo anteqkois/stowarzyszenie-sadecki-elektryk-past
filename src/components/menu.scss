@@ -1,0 +1,32 @@
+@import '../setting/varAndMixin.scss';
+
+.menu{
+    width: 360px;
+    height: 280px;
+    background-color: $color-grey;
+    border-radius:  0 0 0 80% ;
+    position: absolute;
+    transform: translateY(100%);
+    &__list{
+        counter-reset: paddingOfItem 10;
+        
+    }
+    &__item{
+        counter-increment: paddingOfItem 10;
+        padding: 10px;
+        
+        &::before{
+            content: counter(paddingOfItem);
+            padding-left: calc(counter(paddingOfItem) 'px');
+            
+        }
+    }
+    &__icon{
+        display: inline-block;
+    }
+    &__link{
+        text-decoration: none;
+        color: $color-black;
+        padding-left: 10px;
+    }
+}

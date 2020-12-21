@@ -10,13 +10,35 @@ body {
   body nav {
     width: auto;
     height: auto; }
-    body nav .menu {
+    body nav .nav__cointainer {
       background-color: #a3a3a0;
       width: 100vw;
       height: 60px;
       display: flex;
       justify-content: space-between;
       align-items: center; }
+
+.menu {
+  width: 360px;
+  height: 280px;
+  background-color: #a3a3a0;
+  border-radius: 0 0 0 80%;
+  position: absolute;
+  transform: translateY(100%); }
+  .menu__list {
+    counter-reset: paddingOfItem 10; }
+  .menu__item {
+    counter-increment: paddingOfItem 10;
+    padding: 10px; }
+    .menu__item::before {
+      content: counter(paddingOfItem);
+      padding-left: calc(counter(paddingOfItem) 'px'); }
+  .menu__icon {
+    display: inline-block; }
+  .menu__link {
+    text-decoration: none;
+    color: #121212;
+    padding-left: 10px; }
 
 .hamburger {
   display: flex;
@@ -34,20 +56,32 @@ body {
     background-color: #121212;
     position: relative;
     width: 50px;
-    height: 5px;
-    border-radius: 15px; }
+    height: 4px;
+    border-radius: 15px;
+    transform: scale(1);
+    transition: transform 0.25s ease-in-out 0.25s; }
     .hamburger__icon::before, .hamburger__icon::after {
       background-color: #121212;
       content: '';
       position: absolute;
       left: 0;
       width: 50px;
-      height: 5px;
-      border-radius: 15px; }
+      height: 4px;
+      border-radius: 15px;
+      transition: transform 0.25s ease-in-out 0s; }
     .hamburger__icon::before {
-      transform: translateY(10px); }
+      transform: translateY(10px) scale(1) rotate(0deg); }
     .hamburger__icon::after {
-      transform: translateY(-10px); }
+      transform: translateY(-10px) scale(1) rotate(0deg); }
+  .hamburger--active .hamburger__icon {
+    transform: scale(0.1);
+    transition: transform 0.25s ease-in-out; }
+    .hamburger--active .hamburger__icon::before, .hamburger--active .hamburger__icon::after {
+      transition: transform 0.25s ease-in-out 0.25s; }
+    .hamburger--active .hamburger__icon::before {
+      transform: translateY(0px) scale(10) rotate(45deg); }
+    .hamburger--active .hamburger__icon::after {
+      transform: translateY(0px) scale(10) rotate(-45deg); }
 
 .dark-mode {
   visibility: hidden; }

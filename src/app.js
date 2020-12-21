@@ -1,5 +1,7 @@
 import './body/body.scss';
 
+import './components/menu.js';
+import './components/menu.scss';
 import './components/hamburgerMenu.js';
 import './components/hamburgerMenu.scss';
 
