@@ -26,7 +26,11 @@ If you want connecting branch, you must do commit on branch which you want conne
 - git merge origin/master                           -->update (combines data from remote repository witch local) data, file... from remote repository to local repository.
 
 ## update and merge data from remote repository(Every Time when you start working, check whether in remote repository, data have been changed)
-You have execute command "git fetch" and next "git merge origin/master" to join your branch to a remote branch.
+You have two option to update your local repository.
+### First option:
+- You have execute command "git fetch" and next "git merge origin/master" to join your branch to a remote branch.
+### Second option:
+You have execute command "git pull" if you would at once dowland and combines data from remote repository in one step.
 
 ## test from remote repository
 test one was successed
