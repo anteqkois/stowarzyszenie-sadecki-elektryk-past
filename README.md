@@ -28,3 +28,5 @@ If you want connecting branch, you must do commit on branch which you want conne
 ## update and merge data from remote repository(Every Time when you start working, check whether in remote repository, data have been changed)
 You have execute command "git fetch" and next "git merge origin/master".
 
+## test from remote repository
+
