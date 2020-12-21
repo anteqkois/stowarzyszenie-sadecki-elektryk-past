@@ -30,4 +30,5 @@ You have execute command "git fetch" and next "git merge origin/master" to join 
 
 ## test from remote repository
 test one was successed
+Test v.0.0.4
 
