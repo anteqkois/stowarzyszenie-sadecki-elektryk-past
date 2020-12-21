@@ -30,7 +30,7 @@ You have two option to update your local repository.
 ### First option:
 - You have execute command "git fetch" and next "git merge origin/master" to join your branch to a remote branch.
 ### Second option:
-You have execute command "git pull" if you would at once dowland and combines data from remote repository in one step.
+- You have execute command "git pull" if you would at once dowland and combines data from remote repository in one step.
 
 ## test from remote repository
 test one was successed
