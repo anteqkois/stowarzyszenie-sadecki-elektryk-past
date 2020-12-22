@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "webpack --watch --mode development",
     "build": "webpack --watch --mode production",
-    "first": "webpack --watch"
+    "first": "webpack --watch",
+    "start": "browser-sync -s -f dist/app.bundle.css"
   },
   "author": "Antek Kois & Nikodem Kusiak",
   "license": "ISC",
@@ -14,6 +15,8 @@
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "babel-loader": "^8.2.2",
+    "browser-sync": "^2.26.13",
+    "browser-sync-webpack-plugin": "^2.3.0",
     "css-loader": "^5.0.1",
     "html-webpack-plugin": "^4.5.0",
     "mini-css-extract-plugin": "^1.3.3",

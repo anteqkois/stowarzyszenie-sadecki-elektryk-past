@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 
 
 module.exports = {
@@ -59,5 +60,12 @@ module.exports = {
       new  MiniCssExtractPlugin ({
         filename: '[name].bundle.css'
       }),
+      new BrowserSyncPlugin({
+      // browse to http://localhost:3000/ during development,
+      // ./public directory is being served
+      host: 'localhost',
+      port: 3000,
+      server: { baseDir: ['dist'] }
+    })
     ]
 };
