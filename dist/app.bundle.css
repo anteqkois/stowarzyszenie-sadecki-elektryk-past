@@ -65,6 +65,7 @@ body {
     transform: translateY(170px); }
 
 .hamburger {
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;

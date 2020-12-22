@@ -2,6 +2,7 @@
 
 .hamburger {
     $hamburger: &;
+    z-index: 10;
 
     @include flexCenter;
     width: 70px;
