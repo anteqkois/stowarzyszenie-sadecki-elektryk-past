@@ -36,7 +36,7 @@ eval("\n\n//# sourceURL=webpack://stowarzyszenie-sadecki-elektryk/./src/componen
   \*****************************************/
 /***/ (() => {
 
-eval("var hamburger = document.querySelector(\".hamburger\");\n\nvar activeClass = function activeClass() {\n  console.log(this);\n  var nameOfElement = this.classList[0];\n  var activeClass = nameOfElement + '--active';\n  this.classList.toggle(activeClass);\n  console.log(activeClass);\n};\n\nhamburger.addEventListener(\"click\", activeClass);\n\n//# sourceURL=webpack://stowarzyszenie-sadecki-elektryk/./src/components/hamburgerMenu.js?");
+eval("var hamburger = document.querySelector(\".hamburger\");\nvar menu = document.querySelector(\".menu\");\n\nvar activeClass = function activeClass() {\n  console.log(this);\n  var nameOfElement = this.classList[0];\n  var activeClass = nameOfElement + '--active';\n  this.classList.toggle(activeClass);\n};\n\nhamburger.addEventListener(\"click\", activeClass, activeClass.bind(menu));\nhamburger.addEventListener(\"click\", activeClass.bind(menu));\n\n//# sourceURL=webpack://stowarzyszenie-sadecki-elektryk/./src/components/hamburgerMenu.js?");
 
 /***/ }),
 

@@ -1,4 +1,5 @@
 const hamburger = document.querySelector(".hamburger")
+const menu = document.querySelector(".menu")
 
 //Function get a element on which mouse click and add it active class
 const activeClass = function(){
@@ -6,8 +7,7 @@ const activeClass = function(){
     const nameOfElement = this.classList[0];
     const activeClass = nameOfElement+'--active';
     this.classList.toggle(activeClass);
-
-    console.log(activeClass);
 }
 
-hamburger.addEventListener("click", activeClass);
+hamburger.addEventListener("click", activeClass, activeClass.bind(menu));
+hamburger.addEventListener("click", activeClass.bind(menu));

@@ -1,32 +1,35 @@
 @import '../setting/varAndMixin.scss';
 
-.menu{
+.menu {
     width: 360px;
     height: 280px;
-    background-color: $color-grey;
-    border-radius:  0 0 0 80% ;
+    background: transparent;
+    backdrop-filter: blur(5px);
+    box-shadow: $color-grey 0px 1px 15px;
     position: absolute;
-    transform: translateY(100%);
-    &__list{
-        counter-reset: paddingOfItem 10;
-        
+    transform: translateY(-360px);
+    transition: transform 1s ease-in-out;
+
+    &__list {
+        font-size: 20px;
+        font-weight: 600;
     }
-    &__item{
-        counter-increment: paddingOfItem 10;
+
+    &__item {
         padding: 10px;
-        
-        &::before{
-            content: counter(paddingOfItem);
-            padding-left: calc(counter(paddingOfItem) 'px');
-            
-        }
     }
-    &__icon{
+
+    &__icon {
         display: inline-block;
     }
-    &__link{
+
+    &__link {
         text-decoration: none;
         color: $color-black;
         padding-left: 10px;
+    }
+
+    &--active {
+        transform: translateY(170px);
     }
 }

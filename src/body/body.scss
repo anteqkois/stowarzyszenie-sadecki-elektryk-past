@@ -4,26 +4,53 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Teko',
+        sans-serif;
 }
 
 body {
     width: 100vw;
-    height: auto;
+    height: 200vh;
     background-color: $color-white;
 
     nav {
         width: auto;
         height: auto;
+        position: fixed;
 
         .nav__cointainer {
-            background-color: $color-grey;
             width: 100vw;
             height: 60px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
+        .background{
+            background: transparent;
+            backdrop-filter: blur(5px);
+            box-shadow: $color-grey 0px 1px 15px;
+            position: absolute;
+            width: 100vw;
+            height: 60px;
+            &::before{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: $color-grey;
+                opacity: 0.3;
+            }
+        }
     }
+}
+
+.test{
+    width: 50vw;
+    height: 100vh;
+    background-color: $color-purple;
+    transform: translateX(100px);
+    position: absolute;
+    z-index: -19;
 }
 
 // small devices (smartphons on landscape oreintation, 768px and up)
