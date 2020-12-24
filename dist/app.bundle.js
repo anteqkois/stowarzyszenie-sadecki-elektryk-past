@@ -16,7 +16,17 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _img_logo_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./img/logo.png */ \"./src/img/logo.png\");\n/* harmony import */ var _body_body_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./body/body.scss */ \"./src/body/body.scss\");\n/* harmony import */ var _components_menu_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/menu.js */ \"./src/components/menu.js\");\n/* harmony import */ var _components_menu_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_menu_js__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _components_menu_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/menu.scss */ \"./src/components/menu.scss\");\n/* harmony import */ var _components_hamburgerMenu_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/hamburgerMenu.js */ \"./src/components/hamburgerMenu.js\");\n/* harmony import */ var _components_hamburgerMenu_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_hamburgerMenu_js__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _components_hamburgerMenu_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/hamburgerMenu.scss */ \"./src/components/hamburgerMenu.scss\");\n/* harmony import */ var _components_darkMode_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/darkMode.js */ \"./src/components/darkMode.js\");\n/* harmony import */ var _components_darkMode_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_darkMode_js__WEBPACK_IMPORTED_MODULE_6__);\n/* harmony import */ var _components_darkMode_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/darkMode.scss */ \"./src/components/darkMode.scss\");\n/* harmony import */ var _components_association_scss__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/association.scss */ \"./src/components/association.scss\");\n\n\n\n\n\n\n\n\n\n\n//# sourceURL=webpack://stowarzyszenie-sadecki-elektryk/./src/app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _img_logo_png__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./img/logo.png */ \"./src/img/logo.png\");\n/* harmony import */ var _img_triangles_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./img/triangles.svg */ \"./src/img/triangles.svg\");\n/* harmony import */ var _body_body_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./body/body.scss */ \"./src/body/body.scss\");\n/* harmony import */ var _components_menu_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/menu.scss */ \"./src/components/menu.scss\");\n/* harmony import */ var _components_menu_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/menu.js */ \"./src/components/menu.js\");\n/* harmony import */ var _components_menu_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_menu_js__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _components_hamburgerMenu_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/hamburgerMenu.scss */ \"./src/components/hamburgerMenu.scss\");\n/* harmony import */ var _components_hamburgerMenu_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/hamburgerMenu.js */ \"./src/components/hamburgerMenu.js\");\n/* harmony import */ var _components_hamburgerMenu_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_hamburgerMenu_js__WEBPACK_IMPORTED_MODULE_6__);\n/* harmony import */ var _components_button_scss__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/button.scss */ \"./src/components/button.scss\");\n/* harmony import */ var _components_button_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/button.js */ \"./src/components/button.js\");\n/* harmony import */ var _components_button_js__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_components_button_js__WEBPACK_IMPORTED_MODULE_8__);\n/* harmony import */ var _components_darkMode_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/darkMode.scss */ \"./src/components/darkMode.scss\");\n/* harmony import */ var _components_darkMode_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/darkMode.js */ \"./src/components/darkMode.js\");\n/* harmony import */ var _components_darkMode_js__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_components_darkMode_js__WEBPACK_IMPORTED_MODULE_10__);\n/* harmony import */ var _components_association_scss__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/association.scss */ \"./src/components/association.scss\");\n\n\n\n\n\n\n\n\n\n\n\n\n\n//# sourceURL=webpack://stowarzyszenie-sadecki-elektryk/./src/app.js?");
+
+/***/ }),
+
+/***/ "./src/components/button.js":
+/*!**********************************!*\
+  !*** ./src/components/button.js ***!
+  \**********************************/
+/***/ (() => {
+
+eval("\n\n//# sourceURL=webpack://stowarzyszenie-sadecki-elektryk/./src/components/button.js?");
 
 /***/ }),
 
@@ -36,7 +46,7 @@ eval("\n\n//# sourceURL=webpack://stowarzyszenie-sadecki-elektryk/./src/componen
   \*****************************************/
 /***/ (() => {
 
-eval("var hamburger = document.querySelector(\".hamburger\");\nvar menu = document.querySelector(\".menu\");\n\nvar activeClass = function activeClass() {\n  console.log(this);\n  var nameOfElement = this.classList[0];\n  var activeClass = nameOfElement + '--active';\n  this.classList.toggle(activeClass);\n};\n\nhamburger.addEventListener(\"click\", activeClass, activeClass.bind(menu));\nhamburger.addEventListener(\"click\", activeClass.bind(menu));\n\n//# sourceURL=webpack://stowarzyszenie-sadecki-elektryk/./src/components/hamburgerMenu.js?");
+eval("var hamburger = document.querySelector(\".hamburger\");\nvar menu = document.querySelector(\".menu\");\nvar navBackground = document.querySelector(\".nav__background\");\n\nvar activeClass = function activeClass() {\n  console.log(this);\n  var nameOfElement = this.classList[0];\n  var activeClass = nameOfElement + '--active';\n  this.classList.toggle(activeClass);\n};\n\nhamburger.addEventListener(\"click\", activeClass, activeClass.bind(menu));\nhamburger.addEventListener(\"click\", activeClass.bind(menu));\nhamburger.addEventListener(\"click\", activeClass.bind(navBackground));\n\n//# sourceURL=webpack://stowarzyszenie-sadecki-elektryk/./src/components/hamburgerMenu.js?");
 
 /***/ }),
 
@@ -61,6 +71,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/img/triangles.svg":
+/*!*******************************!*\
+  !*** ./src/img/triangles.svg ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"img/triangles.svg\");\n\n//# sourceURL=webpack://stowarzyszenie-sadecki-elektryk/./src/img/triangles.svg?");
+
+/***/ }),
+
 /***/ "./src/body/body.scss":
 /*!****************************!*\
   !*** ./src/body/body.scss ***!
@@ -80,6 +101,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://stowarzyszenie-sadecki-elektryk/./src/components/association.scss?");
+
+/***/ }),
+
+/***/ "./src/components/button.scss":
+/*!************************************!*\
+  !*** ./src/components/button.scss ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://stowarzyszenie-sadecki-elektryk/./src/components/button.scss?");
 
 /***/ }),
 

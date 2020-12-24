@@ -10,6 +10,7 @@
 
 body {
     width: 100vw;
+    max-width: 100vw;
     height: 200vh;
     background-color: $color-white;
     overflow-x: hidden;
@@ -30,14 +31,14 @@ body {
         border-radius: 6px;
     }
 
-    nav {
+    .nav {
         width: 100vw;
         height: auto;
         position: fixed;
         top: 0;
         z-index: 10;
 
-        .nav__cointainer {
+        &__cointainer {
             width: 100%;
             height: 60px;
             display: flex;
@@ -45,17 +46,30 @@ body {
             align-items: center;
         }
 
-        .background {
+        &__background {
             @include backgroundIce;
             background: transparent;
-            backdrop-filter: blur(5px);
-            box-shadow: $color-grey 0px 0px 10px;
+            backdrop-filter: blur(8px);
             position: absolute;
             width: 100%;
             height: 60px;
+            box-shadow: $color-grey 0px 0px 10px;
+            transition: box-shadow 2.75s ease-in-out 0s;
+
+            &--active {
+                box-shadow: $color-grey 0px 0px 0px;
+                transition: box-shadow 0.75s ease-in-out 0s;
+            }
 
         }
     }
+}
+
+.triangles {
+    width: 100vw;
+    height: auto;
+    position: relative;
+    top: 500px;
 }
 
 main {
@@ -75,14 +89,26 @@ main {
     body {
         nav {
             .nav__cointainer {
-                padding: 0px 20px 0px 0px;
+                padding: 0px 15px 0px 0px;
             }
         }
     }
 }
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+    body{
+        .triangles {
+            top: -240px;
+        }
+    }
+}
 
 // Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+    .main{
+        padding: 10px 10%;
+        display: flex;
+        align-items: center;
+    }
+}
