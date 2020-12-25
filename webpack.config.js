@@ -47,6 +47,14 @@ module.exports = {
             name: '[name].[ext]',
             },         
         },
+        {
+          test: /\.php$/i,
+          loader: 'file-loader',
+          options: {
+            outputPath: 'php',
+            name: '[name].[ext]',
+            },         
+        },
       ]
     },
     plugins: [
@@ -64,5 +72,23 @@ module.exports = {
       port: 3000,
       server: { baseDir: ['dist'] }
     }),
+    //new BrowserSyncPlugin(
+    //  // BrowserSync options
+    //  {
+    //    // browse to http://localhost:3000/ during development
+    //    host: 'localhost',
+    //    port: 3000,
+    //    // proxy the Webpack Dev Server endpoint
+    //    // (which should be serving on http://localhost:3100/)
+    //    // through BrowserSync
+    //    proxy: 'http://localhost:8080/Stowarzyszenie%20S%C4%85decki%20Elektryk/dist/index.html'
+    //  },
+    //  // plugin options
+    //  {
+    //    // prevent BrowserSync from reloading the page
+    //    // and let Webpack Dev Server take care of this
+    //    reload: false
+    //  }
+    //)
     ]
 };

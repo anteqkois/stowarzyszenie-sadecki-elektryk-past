@@ -15,3 +15,5 @@ import './components/darkMode.scss';
 import './components/darkMode.js';
 
 import './components/association.scss';
+
+import './php/index.php';
