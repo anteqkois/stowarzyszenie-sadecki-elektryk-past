@@ -3,6 +3,7 @@ import './img/triangles.svg';
 import './img/test1.jpg';
 import './img/test2.jpg';
 import './img/test3.png';
+import './img/iconmonstr-tablet-5.svg';
 
 
 import './body/body.scss';
