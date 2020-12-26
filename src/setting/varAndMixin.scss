@@ -7,6 +7,10 @@ $color-grey: rgb(163, 163, 160);
 $color-turquis: rgb(50, 134, 139);
 $color-red: rgb(236, 78, 50);
 
+$text-size-normal: 1rem;
+$text-size-h1: 1.85rem;
+$text-size-h2: 1.3rem;
+
 // mixins
 @mixin flexCenter {
     display: flex;
@@ -15,9 +19,14 @@ $color-red: rgb(236, 78, 50);
 }
 
 @mixin backgroundIce {
+    background: transparent;
+    backdrop-filter: blur(8px);
+
     &::before {
         content: '';
         position: absolute;
+        left: 0;
+        top: 0;
         width: 100%;
         height: 100%;
         background-color: $color-grey;
@@ -25,3 +34,15 @@ $color-red: rgb(236, 78, 50);
         z-index: -10;
     }
 }
+
+// small devices (smartphons on landscape oreintation, 768px and up)
+@media (max-width: 768px) and (orientation: landscape) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}

@@ -1,11 +1,9 @@
-@import '../setting/varAndMixin.scss';
+@import '../../setting/varAndMixin.scss';
 
 .menu {
     @include backgroundIce;
     width: 100vw;
     height: 240px;
-    background: transparent;
-    backdrop-filter: blur(8px);
     box-shadow: $color-grey 0px 0px 10px;
     position: absolute;
     transform: translateY(-360px);

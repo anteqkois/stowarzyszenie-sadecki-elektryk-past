@@ -1,4 +1,4 @@
-@import '../setting/varAndMixin.scss';
+@import '../../setting/varAndMixin.scss';
 
 .button {
 
@@ -9,7 +9,7 @@
         display: inline-block;
         text-decoration: none;
         color: $color-white;
-        font-size: 1.3rem;
+        font-size: $text-size-h2;
         text-transform: uppercase;
         letter-spacing: 1px;
         padding: 5px 20px 10px 20px;

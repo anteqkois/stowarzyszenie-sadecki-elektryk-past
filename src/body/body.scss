@@ -48,8 +48,6 @@ body {
 
         &__background {
             @include backgroundIce;
-            background: transparent;
-            backdrop-filter: blur(8px);
             position: absolute;
             width: 100%;
             height: 60px;
@@ -72,7 +70,7 @@ body {
     top: 500px;
 }
 
-main {
+.main {
     position: absolute;
     top: 60px;
     width: 100vw;
@@ -80,10 +78,37 @@ main {
 }
 
 
-.project__wrapper{
-        display: inline-block;
-        width: 100%;
-        height: 100%;
+.project-wrapper {
+    @include backgroundIce;
+    //position: relative;
+    //width: auto;
+    height: 100%;
+    margin: 10px;
+    padding: 10px;
+
+    &__title{
+        position: absolute;
+        left: 50%;
+        top: -10%;
+        transform: translateX(-50%);
+        font-size: $text-size-h2;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        white-space: nowrap;
+
+        &::after{
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: $color-white;
+            z-index: -10;
+            box-shadow: $color-grey 0px 0px 10px;
+        }
+    }
+
 }
 
 // small devices (smartphons on landscape oreintation, 768px and up)
@@ -102,7 +127,7 @@ main {
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-    body{
+    body {
         .triangles {
             top: -240px;
         }
@@ -111,9 +136,7 @@ main {
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-    .main{
-        padding: 10px 10%;
-        display: flex;
-        align-items: center;
+    .main {
+        padding: 10px 5%;
     }
 }
