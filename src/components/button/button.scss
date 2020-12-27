@@ -1,36 +1,71 @@
 @import '../../setting/varAndMixin.scss';
 
 .button {
-
+    @include flexCenter;
     border: transparent;
-    //outline: transparent;
-
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    
     &__link {
         display: inline-block;
         text-decoration: none;
         color: $color-white;
-        font-size: $text-size-h2;
+        font-size: $text-size-normal;
         text-transform: uppercase;
         letter-spacing: 1px;
-        padding: 5px 20px 10px 20px;
+        padding: 20px 40px 20px 40px;
         background-color: $color-purple;
-        position: relative;
-
-        &::after {
-            content: "";
-            width: 100%;
-            height: 100%;
-            border: 1px solid $color-black;
-            left: 0px;
-            bottom: 0px;
-            transform: translate(7px, -7px);
-            position: absolute;
-            transition: transform 0.25s ease-in-out;
+        opacity: 0.9;
+        transition: opacity 0.25s ease-in-out;
+        &:hover{
+            opacity: 1;
+            transition: opacity 0.25s ease-in-out;
         }
 
-        &:hover::after {
-            transform: translate(-7px, 7px);
-            transition: transform 0.25s ease-in-out;
+    }
+    &__icon{
+        width: 15px;
+        height: 15px;
+        border-right: 3px solid $color-white;
+        border-top: 3px solid $color-white;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateX(50px) translateY(-50%)rotate(45deg);
+        transition: transform 0.25s ease-in-out;
+
+
+        &::before{
+            content:'';
+            width: 17px;
+            height: 3px;
+            background-color: $color-white;
+            position: absolute;
+            top: 50%;
+            transform:rotate(-45deg) translateX(-10%) translateY(-7px);
+        }
+    }
+    &:hover &__icon{
+        transform: translateX(0px) translateY(-50%)rotate(45deg);
+        transition: transform 0.25s ease-in-out;
+    }
+}
+// small devices (smartphons on landscape oreintation, 768px and up)
+@media (max-width: 768px) and (orientation: landscape) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .button {
+
+        &__link {
+            font-size: $text-size-h2;
         }
     }
 }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}

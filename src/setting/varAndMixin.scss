@@ -8,8 +8,8 @@ $color-turquis: rgb(50, 134, 139);
 $color-red: rgb(236, 78, 50);
 
 $text-size-normal: 1rem;
-$text-size-h1: 1.85rem;
-$text-size-h2: 1.3rem;
+$text-size-h1: 1.5rem;
+$text-size-h2: 1.2rem;
 
 // mixins
 @mixin flexCenter {
@@ -20,7 +20,7 @@ $text-size-h2: 1.3rem;
 
 @mixin backgroundIce {
     background: transparent;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(25px);
 
     &::before {
         content: '';
