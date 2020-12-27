@@ -70,7 +70,7 @@ body {
     height: auto;
     position: relative;
     top: 500px;
-    opacity: 0.85;
+    opacity: 0.35;
 }
 
 .main {
@@ -85,7 +85,8 @@ body {
     @include backgroundIce;
     height: auto;
     margin: 20px 5px;
-    padding-bottom: 1px;
+    padding-bottom: 60px;
+    box-shadow: 7px 15px 20px -6px black;
 
     &__title {
         position: absolute;
@@ -107,7 +108,8 @@ body {
             top: 0;
             background-color: $color-white;
             z-index: -10;
-            box-shadow: 0 9px 10px -6px black;
+            box-shadow: 4px 10px 20px -6px black,
+            3px 0px 15px -10px black;
         }
     }
 
@@ -141,15 +143,22 @@ body {
         .project-wrapper {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: auto;
+            grid-template-rows:  auto;
 
             &__title{
                 font-size: $text-size-h2;
-                left: 75%;
+                left: 25%;
             }
 
             &__image {
                 display:none;
+            }
+            &__illustrations__wrapper {
+                grid-column: 1/2;
+                grid-row: 1/2;
+                display: inline-block;
+                width: 100%;
+                height: 100%;
             }
         }
     }

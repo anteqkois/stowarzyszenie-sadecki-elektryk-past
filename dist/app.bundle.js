@@ -66,7 +66,7 @@ eval("\n\n//# sourceURL=webpack://stowarzyszenie-sadecki-elektryk/./src/componen
   \*******************************************/
 /***/ (() => {
 
-eval("var project = document.querySelectorAll('.project__wrapper');\nconsole.log(project);\n\nfor (var element = 0; element < project.length; element++) {\n  var child = project[element];\n  console.log(child);\n  console.log(child.classList);\n  element % 2 === 0 ? child.classList.add('project__wrapper-left') : child.classList.add('project__wrapper-right');\n}\n\n//# sourceURL=webpack://stowarzyszenie-sadecki-elektryk/./src/components/project/project.js?");
+eval("var project = document.querySelectorAll('.project__wrapper');\nconsole.log(project);\n\nfor (var element = 0; element < project.length; element++) {\n  var child = project[element];\n  console.log(child);\n  console.log(child.classList);\n  element % 2 === 0 ? child.classList.add('project__wrapper-right') : child.classList.add('project__wrapper-left');\n}\n\n//# sourceURL=webpack://stowarzyszenie-sadecki-elektryk/./src/components/project/project.js?");
 
 /***/ }),
 
