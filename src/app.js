@@ -2,7 +2,9 @@ import './img/logo.png';
 import './img/triangles.svg';
 import './img/test1.jpg';
 import './img/test2.jpg';
-import './img/test3.png';
+import './img/test3.jpg';
+import './img/test4.jpg';
+import './img/test5.jpg';
 import './img/iconmonstr-tablet-5.svg';
 
 
