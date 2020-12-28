@@ -1,24 +1,161 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stowarzyszenie Sądecki Elektryk</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
 <link href="app.bundle.css" rel="stylesheet"></head>
 
 <body>
-    <nav>
-        <div class="menu">
+    <img src="./img/triangles.svg" alt="Tło strony" class="triangles">
+    <nav class="nav">
+        <div class="nav__cointainer">
+            <div class="nav__background"></div>
             <input type="checkbox" name="" id="" class="dark-mode">
+            <div class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <div class="menu__icon"></div><a href="#" class="menu__link">Opis Stowarzyszenia</a>
+                    </li>
+                    <li class="menu__item">
+                        <div class="menu__icon"></div><a href="#" class="menu__link">Zrealizowane Projekty</a>
+                    </li>
+                    <li class="menu__item">
+                        <div class="menu__icon"></div><a href="#" class="menu__link">Jak Wspomóc Stowarzyszenie</a>
+                    </li>
+                    <li class="menu__item">
+                        <div class="menu__icon"></div><a href="#" class="menu__link">Panel Administratora</a>
+                    </li>
+                </ul>
+            </div>
             <button class="hamburger">
                 <div class="hamburger__icon"></div>
             </button>
-
         </div>
     </nav>
     <main class="main">
+        <section class="association">
+            <div class="association__wrapper">
+                <img src="img/logo.png" loading="lazy" alt="Logo Stowarzyszenie Sądecki Elektryk" class="association__logo">
+                <h1 class="association__title">Stowarzyszenie Sądecki Elektryk</h1>
+                <p class="association__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                    eiusmod
+                    tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                    commodo
+                    consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis
+                    aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat
+                    cupidatat non
+                    proident.</p>
+                <div class="association__ilustration"></div>
+                <div class="association__button">
+                    <button class="button">
+                        <a href="#" class="button__link">Zrealizowne projekty<div class="button__icon"></div></a>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="project-wrapper">
+            <div class="project-wrapper__title">Ostatnio zrealizowane projekty</div>
+            <img src="./img/test1.jpg" loading="lazy" alt="" class="project-wrapper__image">
+            <div class="project-wrapper__illustartions__wrapper">
+                <img src="" alt="" class="project-wrapper__illustartions">
+            </div>
+            <div class="project__wrapper">
+                <div class="project">
+                    <div class="project__imgage-wrapper"><img src="./img/test2.jpg" loading="lazy" alt="Zdjęcie z projektu"
+                            class="project__image">
+                    </div>
+                    <div class="project__title">Tytuł edfvergv erv er erv</div>
+                    <div class="project__date">12.03.2020</div>
+                    <div class="project__description">proident, sunt in culpa qui officia deserunt mollit anim id est
+                        laborumLorem ipsum dolor
+                        sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit
+                        in voluptate velit esse cillum dolore eu fugiat
+                        nulla pariatur.</div>
+                    <a href="#" class="project__link"><img src="./img/iconmonstr-tablet-5.svg" alt=""
+                            class="project__link-icon-touch">Czytaj więcej o projekcie</a>
+                </div>
+            </div>
+            <div class="project__wrapper">
+                <div class="project">
+                    <div class="project__imgage-wrapper"><img src="./img/test3.jpg" loading="lazy" alt="Zdjęcie z projektu"
+                            class="project__image">
+                    </div>
+                    <div class="project__title">Tytuł edfvergv erv er erv</div>
+                    <div class="project__date">12.03.2020</div>
+                    <div class="project__description">proident, sunt in culpa qui officia deserunt mollit anim id est
+                        laborumLorem ipsum dolor
+                        sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit
+                        in voluptate velit esse cillum dolore eu fugiat
+                        nulla pariatur.</div>
+                    <a href="#" class="project__link"><img src="./img/iconmonstr-tablet-5.svg" alt=""
+                            class="project__link-icon-touch">Czytaj więcej o projekcie</a>
+                </div>
+            </div>
+            <div class="project__wrapper">
+                <div class="project">
+                    <div class="project__imgage-wrapper"><img src="./img/test4.jpg" loading="lazy" alt="Zdjęcie z projektu"
+                            class="project__image">
+                    </div>
+                    <div class="project__title">Tytuł edfvergv erv er erv</div>
+                    <div class="project__date">12.03.2020</div>
+                    <div class="project__description">proident, sunt in culpa qui officia deserunt mollit anim id est
+                        laborumLorem ipsum dolor
+                        sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit
+                        in voluptate velit esse cillum dolore eu fugiat
+                        nulla pariatur.</div>
+                    <a href="#" class="project__link"><img src="./img/iconmonstr-tablet-5.svg" alt=""
+                            class="project__link-icon-touch">Czytaj więcej o projekcie</a>
+                </div>
+            </div>
+            <div class="project__wrapper">
+                <div class="project">
+                    <div class="project__imgage-wrapper"><img src="./img/test5.jpg" loading="lazy" alt="Zdjęcie z projektu"
+                            class="project__image">
+                    </div>
+                    <div class="project__title">Tytuł edfvergv erv er erv</div>
+                    <div class="project__date">12.03.2020</div>
+                    <div class="project__description">proident, sunt in culpa qui officia deserunt mollit anim id est
+                        laborumLorem ipsum dolor
+                        sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation
+                        ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit
+                        in voluptate velit esse cillum dolore eu fugiat
+                        nulla pariatur.</div>
+                    <a href="#" class="project__link"><img src="./img/iconmonstr-tablet-5.svg" alt=""
+                            class="project__link-icon-touch">Czytaj więcej o projekcie</a>
+                </div>
+            </div>
 
+            </div>
+        </section>
     </main>
 <script src="app.bundle.js"></script><script src="projects.bundle.js"></script></body>
 

@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 
 module.exports = {
@@ -40,16 +40,21 @@ module.exports = {
           use: [ MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader' ]
         },
         {
-          test: /\.(png|jpg|gif)$/,
-          use: [
-            {
-              loader: 'url-loader',
-              options: {
-                limit: 8192
-              }
-            }
-          ]
-        }
+          test: /\.(png|jpe?g|gif|svg)$/i,
+          loader: 'file-loader',
+          options: {
+            outputPath: 'img',
+            name: '[name].[ext]',
+            },         
+        },
+        {
+          test: /\.php$/i,
+          loader: 'file-loader',
+          options: {
+            outputPath: 'php',
+            name: '[name].[ext]',
+            },         
+        },
       ]
     },
     plugins: [
@@ -66,6 +71,24 @@ module.exports = {
       host: 'localhost',
       port: 3000,
       server: { baseDir: ['dist'] }
-    })
+    }),
+    //new BrowserSyncPlugin(
+    //  // BrowserSync options
+    //  {
+    //    // browse to http://localhost:3000/ during development
+    //    host: 'localhost',
+    //    port: 3000,
+    //    // proxy the Webpack Dev Server endpoint
+    //    // (which should be serving on http://localhost:3100/)
+    //    // through BrowserSync
+    //    proxy: 'http://localhost:8080/Stowarzyszenie%20S%C4%85decki%20Elektryk/dist/index.html'
+    //  },
+    //  // plugin options
+    //  {
+    //    // prevent BrowserSync from reloading the page
+    //    // and let Webpack Dev Server take care of this
+    //    reload: false
+    //  }
+    //)
     ]
 };

@@ -1,0 +1,74 @@
+@import '../../setting/varAndMixin.scss';
+
+.button {
+    @include flexCenter;
+    border: transparent;
+    position: relative;
+    overflow: hidden;
+    
+    &__link {
+        text-decoration: none;
+        color: $color-white;
+        font-size: $text-size-normal;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        padding: 20px 40px 20px 40px;
+        background-color: $color-purple;
+        border-radius: 30px;
+        transform: scale(0.95);
+        transition: transform 0.25s ease-in-out;
+
+        &:hover {
+            transform: scale(1);
+            transition: transform 0.25s ease-in-out;
+        }
+
+    }
+
+    &__icon {
+        width: 15px;
+        height: 15px;
+        border-right: 3px solid $color-white;
+        border-top: 3px solid $color-white;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateX(50px) translateY(-50%)rotate(45deg);
+        transition: transform 0.25s ease-in-out;
+
+
+        &::before {
+            content: '';
+            width: 17px;
+            height: 3px;
+            background-color: $color-white;
+            position: absolute;
+            top: 50%;
+            transform: rotate(-45deg) translateX(-10%) translateY(-7px);
+        }
+    }
+
+    &:hover &__icon {
+        transform: translateX(0px) translateY(-50%)rotate(45deg);
+        transition: transform 0.25s ease-in-out;
+    }
+}
+
+// small devices (smartphons on landscape oreintation, 768px and up)
+@media (max-width: 768px) and (orientation: landscape) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .button {
+
+        &__link {
+            font-size: $text-size-h2;
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
