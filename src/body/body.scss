@@ -81,7 +81,7 @@ body {
 }
 
 
-.project-wrapper {
+.projects-wrapper {
     @include backgroundIce;
     height: auto;
     margin: 20px 5px;
@@ -140,7 +140,7 @@ body {
             top: -240px;
         }
 
-        .project-wrapper {
+        .projects-wrapper {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows:  auto;

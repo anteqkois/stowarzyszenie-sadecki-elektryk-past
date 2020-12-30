@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --watch --mode development",
+    "dev": "webpack --watch --mode development --config webpack.config.js",
+    "dev-php": "webpack --watch --mode development --config webpack-php.config.js",
     "build": "webpack --watch --mode production",
-    "first": "webpack --watch",
-    "start": "browser-sync -s -f dist/app.bundle.css"
+    "first": "webpack --watch"
   },
   "author": "Antek Kois & Nikodem Kusiak",
   "license": "ISC",
