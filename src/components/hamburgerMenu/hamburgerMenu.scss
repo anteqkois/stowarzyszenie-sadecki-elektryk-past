@@ -65,22 +65,22 @@
     }
 }
 
-//&:focus {
-//    .hamburger__icon {
-//        transform: scale(0.1);
-//        transition: transform 0.25s ease-in-out;
-//
-//        &::before,
-//        &::after {
-//            transition: transform 0.25s ease-in-out 0.25s;
-//        }
-//
-//        &::before {
-//            transform: translateY(0px) scale(10) rotate(45deg);
-//        }
-//
-//        &::after {
-//            transform: translateY(0px) scale(10) rotate(-45deg);
-//        }
-//    }
-//}
+// small devices (smartphons on landscape oreintation, 768px and up)
+@media (max-width: 768px) and (orientation: landscape) {
+    .association {
+        &__wrapper {
+            grid-template-rows: 1fr 1fr 0.6fr;
+        }
+
+        &__button {
+            align-items: flex-start;
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+}

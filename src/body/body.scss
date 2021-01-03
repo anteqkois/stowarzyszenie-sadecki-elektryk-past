@@ -13,7 +13,7 @@
 body {
     width: 100vw;
     max-width: 100vw;
-    height: 200vh;
+    height: 500vh;
     background-color: $color-white;
     overflow-x: hidden;
 
@@ -78,45 +78,7 @@ body {
     top: 60px;
     width: 100vw;
     height: auto;
-}
-
-
-.projects-wrapper {
-    @include backgroundIce;
-    height: auto;
-    margin: 20px 5px;
-    padding-bottom: 60px;
-    box-shadow: 7px 15px 20px -6px black;
-
-    &__title {
-        position: absolute;
-        left: 50%;
-        top: -20px;
-        transform: translateX(-50%);
-        font-size: $text-size-normal;
-        text-transform: uppercase;
-        padding: 10px 20px;
-        white-space: nowrap;
-        font-weight: 500;
-
-        &::after {
-            content: "";
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            left: 0;
-            top: 0;
-            background-color: $color-white;
-            z-index: -10;
-            box-shadow: 4px 10px 20px -6px black,
-            3px 0px 15px -10px black;
-        }
-    }
-
-    &__image {
-        width: 100%;
-        height: auto;
-    }
+    //overflow-x: hidden;
 }
 
 // small devices (smartphons on landscape oreintation, 768px and up)
@@ -124,48 +86,28 @@ body {
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-    body {
-        nav {
-            .nav__cointainer {
-                padding: 0px 15px 0px 0px;
-            }
+
+    nav {
+        .nav__cointainer {
+            padding: 0px 15px 0px 0px;
         }
     }
+
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-    body {
-        .triangles {
-            top: -240px;
-        }
-
-        .projects-wrapper {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows:  auto;
-
-            &__title{
-                font-size: $text-size-h2;
-                left: 25%;
-            }
-
-            &__image {
-                display:none;
-            }
-            &__illustrations__wrapper {
-                grid-column: 1/2;
-                grid-row: 1/2;
-                display: inline-block;
-                width: 100%;
-                height: 100%;
-            }
-        }
+    .triangles {
+        top: 200px;
     }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
+    .triangles {
+        top: 0px;
+    }
+
     .main {
         padding: 10px 5%;
     }

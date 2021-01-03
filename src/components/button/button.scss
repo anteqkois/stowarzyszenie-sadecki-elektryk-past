@@ -4,25 +4,23 @@
     @include flexCenter;
     border: transparent;
     position: relative;
+    background-color: transparent;
+    white-space: nowrap;
     overflow: hidden;
-    
+    box-shadow: 6px 11px 20px -6px black;
+
     &__link {
+        font-family: 'Roboto',
+            sans-serif;
         text-decoration: none;
         color: $color-white;
         font-size: $text-size-normal;
         text-transform: uppercase;
         letter-spacing: 0.8px;
         padding: 20px 40px 20px 40px;
-        background-color: $color-purple;
-        border-radius: 30px;
-        transform: scale(0.95);
+        background-color: $color-purple-faded;
         transition: transform 0.25s ease-in-out;
-
-        &:hover {
-            transform: scale(1);
-            transition: transform 0.25s ease-in-out;
-        }
-
+        overflow: hidden;
     }
 
     &__icon {
@@ -33,8 +31,9 @@
         position: absolute;
         right: 15px;
         top: 50%;
-        transform: translateX(50px) translateY(-50%)rotate(45deg);
+        transform: translateX(30px) translateY(-50%)rotate(45deg);
         transition: transform 0.25s ease-in-out;
+        z-index: 10;
 
 
         &::before {
@@ -48,10 +47,46 @@
         }
     }
 
+
     &:hover &__icon {
         transform: translateX(0px) translateY(-50%)rotate(45deg);
         transition: transform 0.25s ease-in-out;
     }
+
+    [data-text]::before {
+        @include flexCenter;
+        content: attr(data-text)" ";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 8px;
+        transition: transform 0.25s ease-in-out;
+        z-index: 10;
+
+    }
+
+    &::after {
+        content: " ";
+        width: 0%;
+        height: 200%;
+        position: absolute;
+        left: 50%;
+        top: -40%;
+        color: $color-white;
+        background-color: $color-purple;
+        transform: rotate(10deg);
+        transition: all 0.25s ease-in-out;
+
+    }
+
+    &:hover::after {
+        left: -4px;
+        width: 110%;
+        transition: all 0.25s ease-in-out;
+    }
+
 }
 
 // small devices (smartphons on landscape oreintation, 768px and up)

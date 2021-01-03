@@ -3,12 +3,14 @@
 .association {
     display: inline-block;
     width: 100%;
+    height: auto;
 
     &__wrapper {
         width: 100%;
+        height: auto;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(3, 1fr);
+        grid-template-rows: 160px 65% 50px;
         padding: 10px;
     }
 
@@ -31,7 +33,7 @@
         letter-spacing: 1px;
         display: flex;
         align-self: flex-end;
-        transform: translateX(55%);
+        transform: translateX(59%);
         padding: 0px 0px 10px 0px;
         text-shadow: 3px 4px 4px grey;
     }
@@ -43,18 +45,15 @@
         line-height: 1.1rem;
     }
 
-    &__ilustration {
+    &__ilustration-wrapper {
         display: none;
     }
 
     &__button {
+        @include flexCenter;
         grid-column: 1/5;
         grid-row: 3/4;
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-end;
-        padding: 10px;
-        transform: translateY(-10%)
+        transform: translate(0px, 20px);
     }
 
 }
@@ -67,7 +66,7 @@
         }
 
         &__button {
-            align-items: flex-start;
+            grid-row: 3/4;
         }
     }
 }
@@ -90,6 +89,7 @@
             padding: 0px 0px 5% 0px;
             font-size: 3rem;
             line-height: 3rem;
+            transform: translateX(50%);
         }
 
         &__description {
@@ -97,7 +97,7 @@
             line-height: 1.1rem;
         }
 
-        &__ilustration {
+        &__ilustration-wrapper {
             grid-column: 3/4;
             grid-row: 1/2;
             display: inline-block;
@@ -107,6 +107,7 @@
         &__button {
             grid-column: 1/3;
             grid-row: 2/3;
+            transform: translate(30px, 160px);
         }
 
     }
@@ -124,18 +125,48 @@
             grid-column: 1/3;
         }
 
+        &__button {
+            transform: translate(40px, 80px);
+        }
+
     }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
     .association {
-        &__button {
-            transform: translateY(-25%)
+        &__ilustration-wrapper {
+            grid-column: 3/5;
+            grid-row: 1/3;
+            visibility: visible;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
         }
 
         &__ilustration {
-            grid-row: 1/3;
+            width: 330px;
+        }
+    }
+}
+
+@media (min-width: 1400px) {
+    .association {
+        &__ilustration {
+            width: 400px;
+            transform: translate(-50px, 0px);
+        }
+
+        &__button {
+            transform: translate(-100px, 80px);
+        }
+    }
+}
+
+@media (min-width: 1600px) {
+    .association {
+        &__ilustration {
+            width: 500px;
         }
     }
 }
