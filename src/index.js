@@ -9,6 +9,7 @@ import './img/test2.jpg';
 import './img/test3.jpg';
 import './img/test4.jpg';
 import './img/test5.jpg';
+import './img/pit-op.jpg';
 import './img/iconmonstr-tablet-5.svg';
 
 

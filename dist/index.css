@@ -7,7 +7,7 @@
 body {
   width: 100vw;
   max-width: 100vw;
-  height: 500vh;
+  height: 800vh;
   background-color: #edf1f4;
   overflow-x: hidden; }
   body::-webkit-scrollbar {
@@ -392,7 +392,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.8px;
     padding: 20px 40px 20px 40px;
-    background-color: #63328b;
+    background-color: #602d8a;
     transition: transform 0.25s ease-in-out;
     overflow: hidden; }
   .button__icon {
@@ -628,13 +628,11 @@ body {
 .aid-wrapper {
   background: transparent;
   backdrop-filter: blur(25px);
-  height: 1200px;
   margin: 20px 0px;
-  padding: 60px 30px;
-  padding: 10px 30px 60px 30px;
+  padding: 10px 30px 30px 30px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 21% 30% 49%;
+  grid-template-rows: auto;
   box-shadow: 7px 15px 20px -6px black, 0px 0px 5px rgba(145, 144, 144, 0.493);
   transform: translateY(200px); }
   .aid-wrapper::before {
@@ -667,44 +665,199 @@ body {
       background-color: #edf1f4;
       z-index: -10;
       box-shadow: 4px 10px 20px -6px black, 3px 0px 15px -10px black; }
-  .aid-wrapper__illustartion__wrapper {
+
+.aid-illustartion {
+  width: 300px; }
+  .aid-illustartion__wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     grid-column: 1/2;
     grid-row: 1/2;
     position: relative; }
-  .aid-wrapper__illustartion {
-    width: 300px; }
-  .aid-wrapper__illustartion__attribution {
+  .aid-illustartion__attribution {
     color: #a3a3a0;
     font-size: 0.3rem;
     position: absolute;
     left: 50%;
     bottom: 6%;
     transform: translateX(-50%); }
-    .aid-wrapper__illustartion__attribution__link {
+    .aid-illustartion__attribution__link {
       color: #a3a3a0; }
+
+.aid-description__wrapper {
+  grid-column: 1/2;
+  grid-row: 2/3; }
+
+.aid-description__title {
+  font-size: 2rem;
+  margin: 20px 0px; }
+
+.aid-description__text {
+  margin: 20px 0px; }
+  .aid-description__text:nth-child(2) {
+    font-size: 1.2rem;
+    margin: 30px 0px;
+    font-weight: 500; }
+  .aid-description__text:nth-child(3) {
+    margin: 50px 0px; }
+  .aid-description__text:nth-child(4) {
+    margin: 50px 0px; }
+  .aid-description__text strong {
+    font-weight: 500; }
+
+.aid-instruction__wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  grid-column: 1/2;
+  grid-row: 3/4;
+  position: relative; }
+  .aid-instruction__wrapper::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 105%;
+    max-width: 720px;
+    height: 102%;
+    background-color: pink;
+    border-radius: 5px;
+    box-shadow: 6px 15px 30px -6px black;
+    z-index: -10; }
+
+.aid-instruction__text {
+  max-width: 600px; }
+
+.aid-instruction__step-descriptions-item {
+  list-style-type: none;
+  margin: 15px; }
+
+.aid-instruction__step-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 600px; }
+
+.aid-instruction__step-icons-item {
+  list-style-type: none;
+  height: 40px;
+  width: 40px;
+  background-color: #a3a3a0;
+  color: #edf1f4;
+  text-align: center;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 50%;
+  position: relative; }
+  .aid-instruction__step-icons-item::before {
+    content: "";
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translate(-80%, -50%);
+    width: 20vw;
+    max-width: 140px;
+    height: 1px;
+    background-color: inherit;
+    z-index: -10; }
+  .aid-instruction__step-icons-item:nth-child(1)::before {
+    display: none; }
+  .aid-instruction__step-icons-item--passed {
+    background-color: #4d0a83; }
+  .aid-instruction__step-icons-item--active {
+    background-color: #4d0a83; }
+    .aid-instruction__step-icons-item--active::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 115%;
+      height: 115%;
+      background-color: #a3a3a0;
+      border-radius: inherit;
+      border: 3px solid #4d0a83;
+      z-index: -5; }
+
+.aid-instruction-image {
+  width: 100%;
+  max-width: 650px; }
 
 @media (min-width: 992px) {
   .aid-wrapper {
     transform: translateY(150px);
     grid-template-columns: 60% 40%;
-    grid-template-rows: 30% 70%; }
+    max-height: 1250px; }
     .aid-wrapper__title {
       display: none; }
-    .aid-wrapper__illustartion {
-      width: 400px; }
-    .aid-wrapper__illustartion__wrapper {
+  .aid-illustartion {
+    width: 400px; }
+    .aid-illustartion__wrapper {
       grid-column: 2/3; }
-    .aid-wrapper__illustartion__attribution {
-      bottom: 9%; } }
+    .aid-illustartion__attribution {
+      bottom: 9%; }
+  .aid-description__wrapper {
+    grid-row: 1/2; }
+  .aid-instruction__wrapper {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    flex-wrap: wrap; }
+    .aid-instruction__wrapper::before {
+      display: none; }
+  .aid-instruction__step-descriptions-item {
+    max-width: 420px; }
+  .aid-instruction__text {
+    width: 40%; }
+  .aid-instruction__steps-view {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    position: relative; }
+    .aid-instruction__steps-view::before {
+      content: "";
+      position: absolute;
+      right: -3%;
+      top: 50%;
+      transform: translate(0%, -50%);
+      width: 97%;
+      max-width: none;
+      height: 102%;
+      background-color: pink;
+      border-radius: 5px;
+      box-shadow: 6px 15px 30px -6px black;
+      z-index: -10; }
+  .aid-instruction__step-icons {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 80px;
+    margin: 30px 0px; }
+  .aid-instruction__step-icons-item {
+    margin-bottom: 0px; }
+    .aid-instruction__step-icons-item::before {
+      content: "";
+      left: 50%;
+      bottom: 50%;
+      transform: translate(-50%, -50px) rotate(90deg);
+      max-width: 120px; }
+  .aid-instruction-image {
+    margin: 30px 0px; } }
 
 @media (min-width: 1200px) {
-  .aid-wrapper__illustartion__attribution {
+  .aid-illustartion__attribution {
     font-size: 0.6rem;
     left: 51%;
-    bottom: 8%; } }
+    bottom: 8%; }
+  .aid-instruction__step-icons {
+    align-items: flex-start;
+    transform: translateX(-5%); }
+  .aid-instruction__steps-view::before {
+    transform: translate(0%, -50%);
+    width: 100%;
+    max-width: none; } }
 
 .association {
   display: inline-block;
