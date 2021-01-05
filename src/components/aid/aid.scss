@@ -121,7 +121,7 @@
             width: 105%;
             max-width: 720px;
             height: 102%;
-            background-color: pink;
+            background-color: $color-white;
             border-radius: 5px;
             box-shadow: 6px 15px 30px -6px black;
             z-index: -10;
@@ -137,8 +137,14 @@
     &__step-descriptions {}
 
     &__step-descriptions-item {
+        @include flexCenter;
+        height: 130px;
         list-style-type: none;
-        margin: 15px;
+        text-align: center;
+        opacity: 0.5;
+        &--active{
+            opacity: 1;
+        }
     }
 
     &__steps-view {
@@ -151,15 +157,17 @@
         align-items: center;
         width: 100%;
         max-width: 600px;
+        padding: 0px 10px;
+        margin-bottom: 15px;
     }
 
     &__step-icons-item {
+        @include flexCenter;
         list-style-type: none;
         height: 40px;
         width: 40px;
         background-color: $color-grey;
         color: $color-white;
-        text-align: center;
         margin-bottom: 15px;
         padding: 10px;
         border-radius: 50%;
@@ -198,14 +206,19 @@
                 transform: translate(-50%, -50%);
                 width: 115%;
                 height: 115%;
-                background-color: $color-grey;
+                background-color: transparent;
+                backdrop-filter: blur(55px);
                 border-radius: inherit;
                 border: 3px solid $color-purple;
                 z-index: -5;
             }
 
         }
+    }
 
+    &__button {
+        @include flexCenter;
+        transform: scale(0.7);
     }
 
 }
@@ -235,7 +248,9 @@
 
         &__step-icons {}
 
-        &__step-icons-item {}
+        &__step-icons-item {
+            font-size: 1.4rem;
+        }
     }
 
     .aid-description {
@@ -284,20 +299,49 @@
         &__wrapper {
             grid-column: 1/3;
             grid-row: 2/3;
-            flex-wrap: wrap;
 
             &::before {
                 display: none;
             }
         }
 
+        &__step-descriptions {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            height: 100%;
+            padding: 30px 0px;
+            //margin: 20px 25px;
+
+        }
+
         &__step-descriptions-item {
-            max-width: 420px;
+            @include flexCenter;
+            max-width: 340px;
+            height: calc(100% / 5);
         }
 
         &__text {
             width: 40%;
-            //min-width: 35%;
+            color: $color-white;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: -3%;
+                top: 50%;
+                transform: translate(0%, -50%);
+                width: 130%;
+                max-width: none;
+                height: 110%;
+                background-color: $color-purple;
+                border-radius: 5px;
+                box-shadow: 6px 15px 30px -6px black;
+                z-index: -10;
+                opacity: 0.8;
+            }
         }
 
         &__steps-view {
@@ -315,7 +359,7 @@
                 width: 97%;
                 max-width: none;
                 height: 102%;
-                background-color: pink;
+                background-color: $color-white;
                 border-radius: 5px;
                 box-shadow: 6px 15px 30px -6px black;
                 z-index: -10;
@@ -325,7 +369,6 @@
 
         &__step-icons {
             flex-direction: column;
-            align-items: center;
             justify-content: space-around;
             width: 80px;
             margin: 30px 0px;
@@ -333,6 +376,8 @@
 
         &__step-icons-item {
             margin-bottom: 0px;
+            box-shadow: 6px 11px 20px -4px black,
+                -3px 0px 15px -6px black;
 
             &::before {
                 content: "";
@@ -343,14 +388,26 @@
 
             }
         }
+
+        &__button {
+            position: absolute;
+            bottom: 0px;
+            left: 50%;
+            transform: translateX(-40%) scale(0.8);
+        }
     }
 
     .aid-instruction-image {
         //max-width: none;
-        margin: 30px 0px;
+        margin: 30px 0px 70px 0px;
 
-        &__wrapper {}
+        &__wrapper {
+        }
 
+    }
+
+    .aid-wrapper {
+        padding: 10px 40px 40px 40px;
     }
 }
 
@@ -359,6 +416,7 @@
     .aid-wrapper {}
 
     .aid-illustartion {
+
         &__attribution {
             font-size: 0.6rem;
             left: 51%;
@@ -367,25 +425,52 @@
     }
 
     .aid-instruction {
+        &__wrapper {
+            grid-column: 1/3;
+            grid-row: 2/3;
+            min-height: 700px;
+        }
+
         &__step-icons {
-            align-items: flex-start;
-            transform: translateX(-5%);
+            //align-items: flex-start;
+            width: auto;
+            transform: translateX(-50%);
         }
 
         &__steps-view {
 
             &::before {
+                left: 0;
                 transform: translate(0%, -50%);
-                width: 100%;
+                width: 102%;
                 max-width: none;
             }
 
         }
     }
 
+    .aid-instruction-image {
+        margin: 30px 0px 50px 0px;
+
+        &__wrapper {
+            @include flexCenter;
+            width: 90%;
+        }
+
+    }
+
+    .aid-wrapper {
+        padding: 10px 40px 60px 40px;
+    }
+
 }
 
 @media (min-width: 1600px) {
+    .aid-instruction-image {
+        //max-width: none;
+        margin: 30px 0px 70px 0px;
 
-    .aid-wrapper {}
+        &__wrapper {}
+
+    }
 }
