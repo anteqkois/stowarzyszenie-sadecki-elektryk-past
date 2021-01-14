@@ -8,14 +8,17 @@
     //    sans-serif;
     font-family: 'Ubuntu',
         sans-serif;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
     width: 100vw;
     max-width: 100vw;
-    height: 800vh;
+    height: auto;
     background-color: $color-white;
     overflow-x: hidden;
+    //position: relative;
 
     &::-webkit-scrollbar {
         width: 16px;
@@ -37,7 +40,7 @@ body {
         width: 100vw;
         height: auto;
         position: fixed;
-        top: 0;
+        //top: 0;
         z-index: 10;
 
         &__cointainer {
@@ -65,17 +68,20 @@ body {
     }
 }
 
-.triangles {
+.background {
     width: 100vw;
     height: auto;
-    position: relative;
+    max-height: 5440px;
+    position: absolute;
     top: 500px;
-    opacity: 0.35;
+    opacity: 0.25;
+    z-index: -20;
+    //display: none;
 }
 
 .main {
-    position: absolute;
-    top: 60px;
+    //position: absolute;
+    //top: 60px;
     width: 100vw;
     height: auto;
     //overflow-x: hidden;
@@ -87,28 +93,43 @@ body {
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
 
-    nav {
-        .nav__cointainer {
+    .nav {
+        &__cointainer {
             padding: 0px 15px 0px 0px;
         }
+    }
+    .background{
+            max-height: 5250px;
+            top: 250px;
     }
 
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-    .triangles {
-        top: 200px;
+    .background {
+        top: 50px;
+        max-height: 4410px;
     }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-    .triangles {
+    .background {
         top: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 4400px;
+        width: auto;
     }
 
     .main {
         padding: 10px 5%;
+    }
+}
+
+@media (min-width: 1600px) {
+    .background {
+        height: 4400px;
     }
 }

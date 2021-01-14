@@ -3,19 +3,19 @@
 .menu {
     @include backgroundIce;
     width: 100vw;
-    height: 240px;
+    height: 220px;
     box-shadow: $color-grey 0px 0px 10px;
     position: absolute;
     transform: translateY(-360px);
     transition: transform 1s ease-in-out;
 
     &__list {
-        font-size: 1.3rem;
+        font-size: 1.23rem;
         font-weight: 700;
     }
 
     &__item {
-        padding: 10px 10px;
+        padding: 5px 10px;
         width: 100vw;
     }
 
@@ -33,7 +33,7 @@
         text-transform: uppercase;
         list-style: none;
         color: $color-black;
-        padding: 5px 10px 5px 10px;
+        padding: 10px 10px 10px 10px;
 
         &:hover {
             box-shadow: inset rgba(163, 163, 160, 0.329) 0px 0px 100px,
@@ -42,7 +42,7 @@
     }
 
     &--active {
-        transform: translateY(149px);
+        transform: translateY(140px);
     }
 }
 

@@ -8,6 +8,7 @@
     white-space: nowrap;
     overflow: hidden;
     box-shadow: 6px 11px 20px -6px black;
+    cursor: pointer;
 
     &__link {
         font-family: 'Roboto',
@@ -16,7 +17,7 @@
         color: $color-white;
         font-size: $text-size-normal;
         text-transform: uppercase;
-        letter-spacing: 0.8px;
+        letter-spacing: 2px;
         padding: 20px 40px 20px 40px;
         background-color: $color-purple-faded;
         transition: transform 0.25s ease-in-out;
